@@ -1646,6 +1646,15 @@ void preserve_attribute(attribute_op op, serial_feature &, char *stringpool, lon
 				p.full_values[i].type = mvt_string;
 				break;
 
+			case op_uniq: {
+				int found = p.full_values[i].s.find(val.s);
+				if (found < 0){
+					p.full_values[i].s += std::string(",") + val.s;
+				}
+				p.full_values[i].type = mvt_string;
+				break;
+			}
+
 			case op_comma:
 				p.full_values[i].s += std::string(",") + val.s;
 				p.full_values[i].type = mvt_string;

@@ -15,6 +15,7 @@ enum attribute_op {
 	op_mean,
 	op_concat,
 	op_comma,
+	op_uniq,
 	op_max,
 	op_min,
 };
