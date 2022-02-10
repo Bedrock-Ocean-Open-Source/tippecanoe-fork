@@ -1650,24 +1650,24 @@ void preserve_attribute(attribute_op op, serial_feature &, char *stringpool, lon
 			case op_uniq: {
 
 				std::vector<std::string> result;
-        std::stringstream s_stream(p.full_values[i].s);
-        
-        while(s_stream.good()){
-            std::string substr;
-            getline(s_stream, substr, ',');
-            result.push_back(substr);
-        }
-        
-        bool found = false;
-        for (size_t j = 0; j < result.size(); j++){
-            if (val.s == result.at(j)){
-                found = true;
-            } 
-        }
-        
-        if (found == false){
-            p.full_values[i].s += val.s + ",";
-        }
+				std::stringstream s_stream(p.full_values[i].s);
+				
+				while(s_stream.good()){
+					std::string substr;
+					getline(s_stream, substr, ',');
+					result.push_back(substr);
+				}
+
+				bool found = false;
+				for (size_t j = 0; j < result.size(); j++){
+					if (val.s == result.at(j)){
+						found = true;
+					} 
+				}
+				
+				if (found == false){
+					p.full_values[i].s += val.s + ",";
+				}
 			}
 
 			case op_comma:

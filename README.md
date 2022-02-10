@@ -1,4 +1,14 @@
-tippecanoe
+Bedrock Tippecanoe
+==========
+
+This is a hard fork of Mapbox's Tippecanoe tiler that turns GeoJSON into MBtiles. Hard forked on 02/08/22.
+
+To build, clone this repo, then run `make`. That will create executables for each of the programs this repo contains. Once built, you could rename this to say `tippecanoe-br` (so you don't have conflicting versions) and put it your shell path.
+
+Once it's in the shell path you could use it just like tippecanoe but with the custom features.
+
+
+tippecanoe (original README)
 ==========
 
 Builds [vector tilesets](https://www.mapbox.com/developers/vector-tiles/) from large (or small) collections of [GeoJSON](http://geojson.org/), [Geobuf](https://github.com/mapbox/geobuf), or [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) features,
