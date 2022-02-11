@@ -2396,6 +2396,8 @@ void set_attribute_accum(std::map<std::string, attribute_op> &attribute_accum, c
 		t = op_concat;
 	} else if (type == "uniq") {
 		t = op_uniq;
+	} else if (type == "last") {
+		t = op_last;
 	} else if (type == "comma") {
 		t = op_comma;
 	} else {
